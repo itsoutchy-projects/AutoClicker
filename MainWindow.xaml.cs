@@ -102,6 +102,11 @@ namespace AutoClicker
                 startBttn.IsEnabled = true;
             }));
 
+            stopBttn.Dispatcher.Invoke(new Action(() =>
+            {
+                stopBttn.IsEnabled = false;
+            }));
+
             pickPosRadio.Dispatcher.Invoke(new Action(() =>
             {
                 pickPosRadio.IsEnabled = true;
@@ -149,6 +154,11 @@ namespace AutoClicker
                 startBttn.Dispatcher.Invoke(new Action(() =>
                 {
                     startBttn.IsEnabled = false;
+                }));
+
+                stopBttn.Dispatcher.Invoke(new Action(() =>
+                {
+                    stopBttn.IsEnabled = true;
                 }));
 
                 pickPosRadio.Dispatcher.Invoke(new Action(() =>

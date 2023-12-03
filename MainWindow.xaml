@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoClicker"
         mc:Ignorable="d"
-        Title="AutoClicker" Height="282" Width="299" Topmost="True">
+        Title="AutoClicker" Height="305" Width="299" Topmost="True">
     <Grid>
         <Label Content="Auto Clicker" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="38" Width="147" FontSize="23" FontWeight="Bold"/>
         <Button Name="startBttn" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        <Button Name="stopBttn" Content="Stop" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,152,0,0"></Button>
+        <Button Name="stopBttn" Content="Stop" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,152,0,0" IsEnabled="False"></Button>
         <RadioButton Name="curPosRadio" Content="Current Position" HorizontalAlignment="Left" Margin="61,197,0,0" VerticalAlignment="Top" GroupName="pos" IsChecked="True"/>
         <RadioButton Name="pickPosRadio" HorizontalAlignment="Left" Margin="61,212,0,0" VerticalAlignment="Top" GroupName="pos">
             <StackPanel>
