@@ -1,0 +1,23 @@
+﻿<Window x:Class="AutoClicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoClicker"
+        mc:Ignorable="d"
+        Title="AutoClicker" Height="282" Width="299" Topmost="True">
+    <Grid>
+        <Label Content="Auto Clicker" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="38" Width="147" FontSize="23" FontWeight="Bold"/>
+        <Button Name="startBttn" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button Name="stopBttn" Content="Stop" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,152,0,0"></Button>
+        <RadioButton Name="curPosRadio" Content="Current Position" HorizontalAlignment="Left" Margin="61,197,0,0" VerticalAlignment="Top" GroupName="pos" IsChecked="True"/>
+        <RadioButton Name="pickPosRadio" HorizontalAlignment="Left" Margin="61,212,0,0" VerticalAlignment="Top" GroupName="pos">
+            <StackPanel>
+                <Button Name="pickPosBttn" Content="Pick Position"></Button>
+                <Label Name="posText">X: current, Y: current</Label>
+            </StackPanel>
+        </RadioButton>
+        <Button x:Name="IntervalBttn" Content="Interval" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="InfoBttn" Content="Info" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

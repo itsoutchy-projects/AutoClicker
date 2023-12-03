@@ -1,0 +1,14 @@
+﻿<Window x:Class="AutoClicker.InfoDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoClicker"
+        mc:Ignorable="d"
+        Title="InfoDialog" Height="445" Width="417" Topmost="True">
+    <Grid>
+        <Label Content="Auto Clicker by itsoutchy" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="49" Width="330" FontSize="27" FontWeight="Bold"></Label>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="This dialog contains useful information to know, this is edited on every update if there's anything new to put here" TextWrapping="Wrap" Margin="3,59,0,0"></TextBlock>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Stop key shortcut: [CTRL] [ALT] [D] - Hold until the settings get enabled" TextWrapping="Wrap" Margin="22,111,0,0"></TextBlock>
+    </Grid>
+</Window>
