@@ -28,16 +28,30 @@ namespace AutoClicker
     {
         public SetIntervalDialog intervalDialog = new SetIntervalDialog();
         public DispatcherTimer timer;
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        internal static extern bool GetCursorPos(ref Win32Point pt);
+
+        [StructLayout(LayoutKind.Sequential)]
+        internal struct Win32Point
+        {
+            public Int32 X;
+            public Int32 Y;
+        };
+
         /// <summary>
         /// Gets the current mouse position on screen
         /// </summary>
         private Point GetMousePosition()
         {
             // Position of the mouse relative to the window
-            var position = Mouse.GetPosition(this);
+            Win32Point point = new Win32Point();
 
             // Add the window position
-            return new Point(position.X + Left, position.Y + Top);
+            //return new Point(position.X + Left, position.Y + Top);
+            GetCursorPos(ref point);
+            return new Point(point.X, point.Y);
         }
 
         public Point clickPos = new Point();
@@ -70,6 +84,15 @@ namespace AutoClicker
             stopBttn.Click += StopBttn_Click;
             curPosRadio.Click += CurPosRadio_Click;
             InfoBttn.Click += InfoBttn_Click;
+            pickPosRadio.Click += PickPosRadio_Click;
+        }
+
+        private void PickPosRadio_Click(object sender, RoutedEventArgs e)
+        {
+            if (clickPos != null || clickPos != new Point())
+            {
+                posText.Content = $"X: {clickPos.X}, Y: {clickPos.Y}";
+            }
         }
 
         private void InfoBttn_Click(object sender, RoutedEventArgs e)
